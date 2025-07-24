@@ -10,6 +10,30 @@ This project implements a small web utility for interacting with a microcontroll
 
 The application is served by a small Express server.
 
+## JSON Protocol
+
+All communication between the browser and the microcontroller is line based JSON.
+Each message is terminated with a newline (`\n`).
+
+### Controlling outputs
+
+To set the state of the digital outputs the browser sends an object with an
+`outputs` array. Each entry is `0` or `1` corresponding to the state of the
+output pin.
+
+```json
+{"outputs": [1, 0, 0, 1]}
+```
+
+### Reporting inputs
+
+The device can report input states by sending an object with an `inputs` array.
+Each value represents the current state of the matching input pin.
+
+```json
+{"inputs": [0, 1, 1, 0]}
+```
+
 ## Running
 
 ```bash
