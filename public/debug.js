@@ -1,5 +1,5 @@
-const outputs = ["OUT1", "OUT2", "OUT3", "OUT4"];
-const inputs = ["IN1", "IN2", "IN3", "IN4"];
+const outputs = ["Output1", "Output2", "Output3", "Output4"];
+const inputs = ["Input1", "Input2", "Input3", "Input4"];
 
 const outputContainer = document.getElementById('outputs');
 const inputContainer = document.getElementById('inputs');
